@@ -94,11 +94,13 @@ Besides, you can use the scripts `batch_eval_robotcar.py` and `batch_eval_nuscen
 If you find our work useful, please consider citing our paper
 
 ```tex
-@article{wang2021regularizing,
-  title={Regularizing Nighttime Weirdness: Efficient Self-supervised Monocular Depth Estimation in the Dark},
-  author={Wang, Kun and Zhang, Zhenyu and Yan, Zhiqiang and Li, Xiang and Xu, Baobei and Li, Jun and Yang, Jian},
-  journal={arXiv preprint arXiv:2108.03830},
-  year={2021}
+@InProceedings{Wang_2021_ICCV,
+    author    = {Wang, Kun and Zhang, Zhenyu and Yan, Zhiqiang and Li, Xiang and Xu, Baobei and Li, Jun and Yang, Jian},
+    title     = {Regularizing Nighttime Weirdness: Efficient Self-Supervised Monocular Depth Estimation in the Dark},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {16055-16064}
 }
 ```
 
