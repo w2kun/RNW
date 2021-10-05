@@ -1,0 +1,59 @@
+
+total_epochs: 20
+imgs_per_gpu: &b 8
+workers_per_gpu: 4
+checkpoint_epoch_interval: 2
+
+data_link: None
+
+dataset:
+  type: "multiple_robotcar"
+  frame_ids: &f [ 0, -1, 1 ]
+  width: &w 576
+  height: &h 320
+
+  multiple_robotcar:
+    subsets:
+      - name: "day"
+        root_dir: "day"
+      - name: "night"
+        root_dir: "night"
+    master: "night"
+    down_scale: True
+    num_out_scales: 5
+    gen_equ: True
+    equ_limit: 0.008
+    shuffle: True
+
+model:
+  name: "rnw"
+
+  day_config: "mono2_rc_day"
+  day_check_point: "checkpoints/mono2_rc_day/checkpoint_epoch=5.ckpt"
+
+  depth_num_layers: 50
+  pose_num_layers: 18
+
+  learning_rate: 1.0e-4
+
+  frame_ids: *f
+  imgs_per_gpu: *b
+  height: *h
+  width: *w
+  scales: [0, 1, 2, 3, 4]
+  min_depth: 0.1
+  max_depth: 100.0
+
+  use_equ: True
+
+  automask: True
+  disp_norm: True
+
+  disparity_smoothness: 1.0e-3
+
+  use_static_mask: True
+  static_mask_quantile: 0.1
+
+  use_position_map: True
+  G_weight: 2.5e-4
+  D_weight: 2.5e-4
