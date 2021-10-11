@@ -1,4 +1,4 @@
-# Regularizing Nighttime Weirdness: Efficient Self-supervised Monocular Depth Estimation in the Dark
+# Regularizing Nighttime Weirdness: Efficient Self-supervised Monocular Depth Estimation in the Dark (ICCV 2021)
 Kun Wang, Zhenyu Zhang, Zhiqiang Yan, Xiang Li, Baobei Xu, Jun Li and Jian Yang
 
 PCA Lab, Nanjing University of Science and Technology; Tencent YouTu Lab; Hikvision Research Institute
